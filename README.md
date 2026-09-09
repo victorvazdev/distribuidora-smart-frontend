@@ -2,13 +2,16 @@
 
 Uma Single Page Application (SPA) para gerenciamento de estoque de distribuidoras. Este projeto permite o cadastro, listagem, edição e exclusão de **Produtos**.
 
-Este frontend foi desenvolvido seguindo princípios estritos de **Vanilla Web Development**, sem a utilização de frameworks JavaScript pesados (como React, Angular ou Vue) ou bibliotecas de pré-processamento, garantindo alta performance, leveza e execução direta no navegador.
+Este frontend foi desenvolvido seguindo princípios estritos de **Vanilla Web Development**, sem a utilização de frameworks JavaScript pesados (como React, Angular ou Vue) ou bibliotecas de pré-processamento, garantindo alta performance.
+
+Foi utilizado a API da [Open Food Facts](https://br.openfoodfacts.org/), no qual permite o preenchimento automático das informações como nome e url da imagem na hora de cadastro de produtos.
 
 ## Tecnologias Utilizadas
 
 * **HTML5:** Estrutura semântica da aplicação.
 * **CSS3:** Estilização customizada nativa (Flexbox, CSS Grid) sem frameworks de UI.
 * **JavaScript (ES6+):** Manipulação do DOM, controle de estado da SPA e consumo da API RESTful via `Fetch API`.
+* **API Externa da [Open Food Facts](https://br.openfoodfacts.org/)**: Captura de informações de produtos, auxiliando no auto-preenchimento.
 
 ## Pré-requisitos e Dependências
 
@@ -27,7 +30,7 @@ A maneira mais fácil e isolada de rodar o projeto é utilizando o Docker. Certi
 
 1. Faça o clone do repositório e acesse a pasta do projeto:
 ```bash
-git clone [https://github.com/victorvazdev/distribuidora-smart-frontend.git](https://github.com/victorvazdev/distribuidora-smart-frontend.git)
+git clone https://github.com/victorvazdev/distribuidora-smart-frontend.git
 cd distribuidora-smart-frontend
 ```
 
@@ -41,7 +44,7 @@ docker build -t victorvazdev/distribuidora-smart-frontend:1.0.0 .
 docker run -d --name ds-front -p 8080:80 victorvazdev/distribuidora-smart-frontend:1.0.0
 ```
 
-A aplicação já estará rodando e pronta para acesso na porta 8000.
+A aplicação já estará rodando e pronta para acesso na porta 8080.
 
 ## Como executar o projeto localmente (Sem Docker)
 Caso prefira rodar sem containers, siga os passos abaixo para executar a aplicação no seu ambiente local:
@@ -72,8 +75,14 @@ Para inicializar o frontend, basta dar um duplo clique no arquivo principal:
 
 ## Estrutura de Arquivos
 .
-├── app.js
+├── css
+│   └── styles.css
 ├── Dockerfile
+├── img
+│   └── fluxograma-da-arquitetura-da-distribuidora-smart.jpg
 ├── index.html
-├── README.md
-└── styles.css
+├── js
+│   ├── api.js
+│   ├── main.js
+│   └── ui.js
+└── README.md
