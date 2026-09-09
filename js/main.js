@@ -134,12 +134,14 @@ async function fetchProductData(mode) {
             if (imageInput) {
                 imageInput.value = data.product.image_url || data.product.image_front_url || imageInput.value;
             }
-        } else {
-            alert('Produto não localizado na base pública.');
         }
     } catch (error) {
-        console.error(error);
-        alert('Erro de comunicação com o OpenFoodFacts.');
+        console.error(`${error}: Produto não encontrado.`);
+        if (error.message == 'not_found') {
+            alert('Produto não localizado na base pública.');
+        } else {
+            alert('Erro de comunicação com o OpenFoodFacts.');
+        }
     } finally {
         nameInput.placeholder = originalPlaceholder;
     }
