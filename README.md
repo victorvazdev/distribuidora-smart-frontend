@@ -29,12 +29,12 @@ cd distribuidora-smart-frontend
 
 2. Construa a imagem da aplicação:
 ```bash
-docker build -t distribuidora-smart-frontend .
+docker build -t victorvazdev/distribuidora-smart-frontend:1.0.0 .
 ```
 
 3. Execute o container mapeando a porta 8000:
 ```bash
-docker run -d --name ssfrontend -p 8080:80 victorvazdev/distribuidora-smart-frontend:1.0.0
+docker run -d --name ds-front -p 8080:80 victorvazdev/distribuidora-smart-frontend:1.0.0
 ```
 
 A aplicação já estará rodando e pronta para acesso na porta 8000.
