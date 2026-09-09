@@ -17,6 +17,10 @@ Devido à arquitetura **Vanilla Web Developnment** o qual foi adotada, o fronten
 **No entanto, o frontend depende do Backend (API) para funcionar corretamente:**
 * A API em Python/Flask deve estar em execução na sua máquina local.
 
+## Fluxograma da Arquitetura do Projeto
+
+![Fluxograma](./img/fluxograma-da-arquitetura-da-distribuidora-smart.jpg)
+
 ## Como executar com Docker (Recomendado)
 
 A maneira mais fácil e isolada de rodar o projeto é utilizando o Docker. Certifique-se de ter o [Docker](https://www.docker.com/) instalado e rodando em sua máquina.
