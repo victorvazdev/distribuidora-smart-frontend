@@ -6,6 +6,8 @@ Este frontend foi desenvolvido seguindo princípios estritos de **Vanilla Web De
 
 Foi utilizado a API da [Open Food Facts](https://br.openfoodfacts.org/), no qual permite o preenchimento automático das informações como nome e url da imagem na hora de cadastro de produtos.
 
+> ⚠️ **IMPORTANTE:** [A API da Open Food Facts aceita somente 15 requisições por minuto, caso esses limites sejam atingidos, o acesso à API negado por meio do bloqueio do endereço IP](https://openfoodfacts.github.io/openfoodfacts-server/api/#rate-limits).
+
 ## Tecnologias Utilizadas
 
 * **HTML5:** Estrutura semântica da aplicação.
@@ -73,7 +75,33 @@ Para inicializar o frontend, basta dar um duplo clique no arquivo principal:
 2. Dê um duplo clique no arquivo index.html.
 3. O projeto será aberto e executado imediatamente no seu navegador padrão web (Chrome, Firefox, Edge, Safari, etc).
 
+## Exemplos para testar a integração com a API Externa
+Aqui estão alguns códigos de barra testar o auto-preenchimento através da API [Open Food Facts](https://br.openfoodfacts.org/):
+
+Refrigerante Lemon Fresh Zero Açúcar Sprite Garrafa 510ml:
+```text
+7894900680508
+```
+
+Chá Preto Ice Tea Pêssego Leão Garrafa 450ml:
+```text
+7891098040893
+```
+
+Suco de Laranja:
+```text
+7899916918829
+```
+
+Guarana 2L:
+```text
+7891991001342
+```
+
+> ⚠️ **IMPORTANTE:** [A API da Open Food Facts aceita somente 15 requisições por minuto, caso esses limites sejam atingidos, o acesso à API negado por meio do bloqueio do endereço IP](https://openfoodfacts.github.io/openfoodfacts-server/api/#rate-limits).
+
 ## Estrutura de Arquivos
+```text
 .
 ├── css
 │   └── styles.css
@@ -86,3 +114,4 @@ Para inicializar o frontend, basta dar um duplo clique no arquivo principal:
 │   ├── main.js
 │   └── ui.js
 └── README.md
+```

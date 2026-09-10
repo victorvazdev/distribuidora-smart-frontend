@@ -262,3 +262,25 @@ th {
     background-color: #e0e6ed; /* Fundo cinza caso não haja imagem */
     display: block;
 }
+
+/* --- Estilização da Paginação --- */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+#page-info {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+button:disabled {
+    background-color: #bdc3c7 !important;
+    cursor: not-allowed;
+    opacity: 0.7;
+}

@@ -20,7 +20,7 @@
                     <h2>Adicionar Produto</h2>
                     <form id="add-form">
                         <div class="barcode-wrapper">
-                            <input type="text" id="add-barcode" placeholder="Código de Barras" required>
+                            <input type="text" id="add-barcode" placeholder="Código de Barras">
                             <button type="button" class="btn-api" onclick="fetchProductData('add')" title="Buscar nome na API">OK</button>
                         </div>
                         <input type="text" id="add-name" placeholder="Nome" required>
@@ -52,6 +52,11 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Novo Botão -->
+            <button id="btn-popular-db" class="btn btn-primary" style="margin-bottom: 15px;">
+                Popular Banco de Dados
+            </button>
         </div>
 
         <!-- Coluna da Direita (Tabela de Estoque) -->
@@ -76,6 +81,13 @@
                                 <!-- Renderizado via JS -->
                             </tbody>
                         </table>
+
+                        <!-- Controles de Paginação -->
+                        <div class="pagination-controls hidden" id="pagination-wrapper">
+                            <button id="btn-prev" class="btn-secondary" onclick="changePage(-1)">Anterior</button>
+                            <span id="page-info">Página 1 de 1</span>
+                            <button id="btn-next" class="btn-secondary" onclick="changePage(1)">Próxima</button>
+                        </div>
                     </div>
                 </div>
             </section>

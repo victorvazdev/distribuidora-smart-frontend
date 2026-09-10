@@ -42,3 +42,24 @@ export function populateEditModal(id, name, barcode, quantity, value, imageUrl) 
     document.getElementById('update-value').value = value;
     toggleModal(true);
 }
+
+// Adicione junto às outras exportações no ui.js
+export function renderPagination(currentPage, totalPages) {
+    const wrapper = document.getElementById('pagination-wrapper');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const pageInfo = document.getElementById('page-info');
+
+    // Oculta se não houver dados
+    if (totalPages === 0) {
+        wrapper.classList.add('hidden');
+        return;
+    }
+
+    wrapper.classList.remove('hidden');
+    pageInfo.innerText = `Página ${currentPage} de ${totalPages}`;
+    
+    // Trava os botões nas extremidades
+    btnPrev.disabled = currentPage === 1;
+    btnNext.disabled = currentPage === totalPages;
+}
