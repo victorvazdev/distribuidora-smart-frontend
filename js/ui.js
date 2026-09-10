@@ -14,7 +14,7 @@ export function renderTable(products) {
             <td>${p.name}</td>
             <td>${p.barcode}</td>
             <td>${p.quantity}</td>
-            <td>R$ ${p.value.toFixed(2)}</td>
+            <td>${p.value.toFixed(2)}</td>
             <td>
                 <div class="action-btns">
                     <button class="btn-warning" onclick="editProduct(${p.id}, '${p.name}', '${p.barcode}', ${p.quantity}, ${p.value}, '${p.image_url || ''}')">Editar</button>

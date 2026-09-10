@@ -6,7 +6,7 @@ Este frontend foi desenvolvido seguindo princípios estritos de **Vanilla Web De
 
 Foi utilizado a API da [Open Food Facts](https://br.openfoodfacts.org/), no qual permite o preenchimento automático das informações como nome e url da imagem na hora de cadastro de produtos.
 
-> ⚠️ **IMPORTANTE:** [A API da Open Food Facts aceita somente 15 requisições por minuto, caso esses limites sejam atingidos, o acesso à API negado por meio do bloqueio do endereço IP](https://openfoodfacts.github.io/openfoodfacts-server/api/#rate-limits).
+> ⚠️ **IMPORTANTE:** [A API da Open Food Facts aceita somente 15 requisições por minuto, caso esses limites sejam atingidos, o acesso à API será negado por meio do bloqueio do endereço IP](https://openfoodfacts.github.io/openfoodfacts-server/api/#rate-limits).
 
 ## Tecnologias Utilizadas
 
@@ -98,7 +98,7 @@ Guarana 2L:
 7891991001342
 ```
 
-> ⚠️ **IMPORTANTE:** [A API da Open Food Facts aceita somente 15 requisições por minuto, caso esses limites sejam atingidos, o acesso à API negado por meio do bloqueio do endereço IP](https://openfoodfacts.github.io/openfoodfacts-server/api/#rate-limits).
+> ⚠️ **IMPORTANTE:** [A API da Open Food Facts aceita somente 15 requisições por minuto, caso esses limites sejam atingidos, o acesso à API será negado por meio do bloqueio do endereço IP](https://openfoodfacts.github.io/openfoodfacts-server/api/#rate-limits).
 
 ## Estrutura de Arquivos
 ```text

@@ -225,7 +225,9 @@ async function populateDatabase(e) {
         }
     }
 
-    alert(`Processo concluído! Sucessos: ${sucessos} | Falhas: ${falhas}`);
+    if (falhas > 0) {
+        alert(`Processo concluído! Sucessos: ${sucessos} | Falhas: ${falhas}`);
+    }
     
     // Restaura o botão e atualiza a tabela dinamicamente usando sua função nativa
     botao.disabled = false;
